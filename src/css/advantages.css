@@ -5,14 +5,14 @@
 	padding: 0px;
 	gap: 40px;
 
-	width: 962px;
+	max-width: 962px;
+	width:76.65%;
 	height: auto;
 }
 .advantages_title {
 	font-style: normal;
 	font-weight: 700;
 	font-size: 36px;
-	line-height: 45px;
 	/* identical to box height, or 125% */
 	text-align: center;
 	color: #242424;
@@ -85,39 +85,26 @@
 
 
 @media (max-width: 1439px) {
-    .advantages{
-        width: 818px;
-    }
-    .advantages_title {
-		height: 18px;
-		font-size: 32px;
-		line-height: 15px;
-	}
+    
 }
 @media (max-width: 1200px) {
-    .advantages_title {
-		height: 10px;
-		font-size: 30px;
-		line-height: 12px;
-	}
+    
 }
 @media (max-width: 992px) {
-    .advantages{
-        width: 634px;
-    }
-    .advantages_title {
-		height: 15px;
-		font-size: 24px;
-		line-height: 35px;
-	}
+    
 }
 @media (max-width: 768px) {
-    .advantages{
-        width: 427px;
-    }
-	.advantages_title{
-		height: 29px;
-	}
+   
 }
 @media (max-width: 576px) {
+}
+
+@media (min-width: 200px) and (max-width: 1440px) {
+	.advantages {
+		width: calc(100% + (76.65 - 100) * ((100vw - 400px) / (1440px - 400)));
+	}
+	
+	.advantages_title {
+		font-size: calc(16px + (36 - 16) * ((100vw - 200px) / (1440 - 200)));
+	}
 }

@@ -6,13 +6,23 @@
 html {
   overflow-x: hidden;
 }
-main {
+
+.container {
   margin: 0 auto;
   max-width: 1400px;
   width: 100%;
-  background: #ffffff;
+  background: #FFFFFF;
   position: relative;
 }
+.city_img {
+	position: absolute;
+	width: 100%;
+	height: 851.88px;
+	top: 497.41px;
+	background: url(../assets/images/3395706.jpg), center/cover no-repeat;
+	overflow: hidden;
+}
+
 .info_block {
   display: flex;
   flex-direction: column;
@@ -21,9 +31,13 @@ main {
   gap: 64px;
 
   position: absolute;
-  width: 1255px;
-  left: 77.5px;
-  top: 759px;
+  max-width: 1255px;
+  z-index: 0;
+  width: 90%;
+  right: 0;
+	left: 0;
+	margin: auto;
+  top: 808px;
 }
 .leave_request_button{
   display: flex;
@@ -47,34 +61,21 @@ main {
 
 }
 @media (max-width: 1439px) {
-  .info_block {
-    width: 1047px;
-    top: 779px;
-    left: 79.5px;
-  }
+
 }
 @media (max-width: 1200px) {
-  .info_block {
-    top: 757px;
-    width: 878px;
-    left: 51.5px;
-    gap: 50px;
-  }
+
 }
 @media (max-width: 992px) {
-  .info_block {
-    width: 623px;
-    top: 620px;
-    left: 67.5px;
-    gap: 40px;
-  }
+
 }
 @media (max-width: 768px) {
-    .info_block {
-        width: 467px;
-        top: 746px;
-        left: 50.5px;
-    }
+  .info_block{
+    top: 888px;
+  }
 }
 @media (max-width: 576px) {
+  .info_block{
+    gap: 30px;
+  }
 }

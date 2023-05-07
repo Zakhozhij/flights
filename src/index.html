@@ -13,35 +13,37 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<main class="main">
+		<main class="container">
+			<section class="city_img"></section>
 			<section class="promo">
-				<div class="menu">
-					<nav>
-						<div class="container">
-							<a href="#" class="menu_logo"><img src="assets/images/logo.svg" alt="logo" /></a>
-							<ul class="menu_list">
-								<li class="menu_list_item">
-									<a href="#Benefits" class="menu_list_item_link">Benefits</a>
-								</li>
-								<li class="menu_list_item">
-									<a href="#HowItWorks" class="menu_list_item_link">How it works</a>
-								</li>
-								<li class="menu_list_item">
-									<a href="#OtherDeals" class="menu_list_item_link">Other Deals</a>
-								</li>
-								<li class="menu_list_item">
-									<a href="#Reviews" class="menu_list_item_link">Reviews</a>
-								</li>
-								<li class="menu_list_item">
-									<button class="menu_list_item_link">Leave a request</button>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
+				<nav class="menu">
+					<div class="logo">
+						<a href="#" class="menu_logo"><img src="assets/images/logo.svg" alt="logo" /></a>
+					</div>
+					<ul class="menu_list">
+						<li class="menu_list_item">
+							<a href="#Benefits" class="menu_list_item_link">Benefits</a>
+						</li>
+						<li class="menu_list_item">
+							<a href="#HowItWorks" class="menu_list_item_link">How it works</a>
+						</li>
+						<li class="menu_list_item">
+							<a href="#OtherDeals" class="menu_list_item_link">Other Deals</a>
+						</li>
+						<li class="menu_list_item">
+							<a href="#Reviews" class="menu_list_item_link">Reviews</a>
+						</li>
+						<li class="menu_list_item">
+							<button class="menu_list_item_link">Leave a request</button>
+						</li>
+					</ul>
+					<div class="hamburger">
+						<img src="assets/images/material-symbols_menu.svg" alt="menu" />
+					</div>
+				</nav>
 				<div class="promo_banner">
 					<h1 class="title">
-						Business & First Class Flights<br />
+						Business & First Class Flights 
 						<span>from Europe to Dubai (DXB)</span>
 					</h1>
 					<div class="sale_description">Save up to 50% <span>on Emirates Flights</span></div>
@@ -95,70 +97,100 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="elipse">
+					<div class="call-bell">
+						<img src="assets/images/call-bell.svg" alt="call-bell" />
+					</div>
+					<div class="elipse_online">Online 24/7</div>
+					<div class="free_call_back">Free call back</div>
+				</div>
 			</section>
 			<section class="form_free_quote">
-				<div class="container">
-					<div class="form_free_quote_content">
-						<div class="form_free_quote_title">Fill out the form to get a free quote</div>
-						<form>
-							<div class="form">
-								<div class="form_input">
-									<label for="name" class="form_label">Name</label>
-									<input type="text" placeholder="Enter your name" class="form-control" id="name" />
-								</div>
-								<div class="form_input">
-									<label for="email" class="form_label">Email</label>
-									<input
-										type="text"
-										placeholder="example@example.com"
-										class="form-control"
-										id="email"
-									/>
-								</div>
-								<div class="form_input">
-									<label for="phone_number" class="form_label">Phone number</label>
-									<input type="text" placeholder="+1" class="form-control" id="phone_number" />
-								</div>
+				<div class="form_free_quote_content">
+					<div class="form_free_quote_title">Fill out the form to get a free quote</div>
+					<form class="form">
+						<div class="form_block">
+							<div class="form_input">
+								<label for="name" class="form_label">Name</label>
+								<input type="text" placeholder="Enter your name" class="form-control" id="name" />
 							</div>
-							<div class="form_submit">
-								<div class="form_submit_item"></div>
-								<button type="button" class="form_submit_button">Get a Free Quote</button>
-								<div class="form_submit_item"></div>
+							<div class="form_input">
+								<label for="email" class="form_label">Email</label>
+								<input type="text" placeholder="example@example.com" class="form-control" id="email" />
 							</div>
-						</form>
-					</div>
+							<div class="form_input">
+								<label for="phone_number" class="form_label">Phone number</label>
+								<input type="text" placeholder="+1" class="form-control" id="phone_number" />
+							</div>
+						</div>
+						<div class="form_submit">
+							<div class="form_submit_item"></div>
+							<button type="button" class="form_submit_button">Get a Free Quote</button>
+							<div class="form_submit_item"></div>
+						</div>
+					</form>
 				</div>
 			</section>
-			<div class="elipse">
-				<div class="call-bell">
-					<img src="assets/images/call-bell.svg" alt="call-bell" />
-				</div>
-				<div class="elipse_online">Online 24/7</div>
-				<div class="free_call_back">Free call back</div>
-			</div>
-			<div class="city_img"></div>
+
 			<div class="info_block">
 				<section class="slider">
 					<h2 class="slider_title">Benefits of flying Business Class to Dubai</h2>
 					<div class="slider_slides">
 						<div class="slider_slides_block">
 							<div class="slider_slides_prev_arrow">
-								<img src="assets/images/material-symbols_chevron-left.svg" alt="left arrow" />
+								<img
+									src="assets/images/material-symbols_chevron-left.svg"
+									class="slider_slides_arrow"
+									alt="left arrow"
+								/>
 							</div>
-							<img
-								class="slider_slides_image"
-								src="assets/images/istockphoto-1177037281-1024x1024-transformed.jpg"
-								alt="istockphoto"
-							/>
+							<div class="offer__slider-wrapper">
+								<div class="offer_slider-inner">
+									<div class="offer__slide">
+										<img
+											class="slider_slides_image"
+											src="assets/images/istockphoto-1049248354-1024x1024-transformed.png"
+											alt="coffee"
+										/>
+									</div>
+									<div class="offer__slide">
+										<img
+											class="slider_slides_image"
+											src="assets/images/istockphoto-1177037281-1024x1024-transformed.jpg"
+											alt="plane"
+										/>
+									</div>
+									<div class="offer__slide">
+										<img
+											class="slider_slides_image"
+											src="assets/images/istockphoto-1049248354-1024x1024-transformed.png"
+											alt="coffee"
+										/>
+									</div>
+									<div class="offer__slide">
+										<img
+											class="slider_slides_image"
+											src="assets/images/istockphoto-1177037281-1024x1024-transformed.jpg"
+											alt="plane"
+										/>
+									</div>
+								</div>
+							</div>
 							<div class="slider_slides_next_arrow">
-								<img src="assets/images/material-symbols_chevron-right.svg" alt="right arrow" />
+								<img
+									src="assets/images/material-symbols_chevron-right.svg"
+									class="slider_slides_arrow"
+									alt="right arrow"
+								/>
 							</div>
 						</div>
 						<div class="slider_menu">Delicious menu and exclusive wine list</div>
 						<div class="slider_points">
-							<span class="slider_points_item slider_points_item_active"></span
-							><span class="slider_points_item"></span><span class="slider_points_item"></span
-							><span class="slider_points_item"></span>
+							<span class="slider_points_item" data-slide-to="1">
+								</span
+							><span class="slider_points_item"  data-slide-to="2"></span><span class="slider_points_item"  data-slide-to="3"></span
+							><span class="slider_points_item"  data-slide-to="4"></span>
 						</div>
 					</div>
 				</section>
@@ -255,6 +287,7 @@
 						<button class="leave_request_button">Leave a request</button>
 					</div>
 				</section>
+
 				<section class="first_class_flights">
 					<h2 class="first_class_flights_title">Save up to 50% on Business & First Class Flights</h2>
 
@@ -345,10 +378,123 @@
 					</div>
 
 					<div class="first_class_flights_leave_request">
-						<button class="leave_request_button">Choose a flight</button>
+						<button class="leave_request_button choose_flight">Choose a flight</button>
 					</div>
 				</section>
 			</div>
 		</main>
+
+		<footer class="container">
+			<section class="footer">
+				<div class="footer_contacts">
+					<div class="footer_contacts_row">
+						<div class="footer_contacts_item">
+							<img src="assets/images/logo2.svg" class="footer_contacts_item_logo" alt="logo" />
+							<div class="footer_contacts_item_1_info_1">Flyer Club, INC</div>
+							<div class="footer_contacts_item_1_info_2">Your trusted luxury travel alliance</div>
+						</div>
+						<div class="footer_contacts_item">
+							<div class="footer_contacts_item_info">
+								<img
+									src="assets/images/coors.jpg"
+									class="footer_contacts_item_coors_image"
+									alt="coors"
+								/>
+								<div class="footer_contacts_item_coors">
+									<div class="footer_contacts_item_coors_item_1">1603 Capitol Avenue</div>
+									<div class="footer_contacts_item_coors_item_2">Suite 413 #B102</div>
+									<div class="footer_contacts_item_coors_item_3">Cheyenne, WY, 82001</div>
+								</div>
+							</div>
+							<div class="footer_contacts_item_info">
+								<img src="assets/images/cite.jpg" class="footer_contacts_item_coors_image" alt="cite" />
+								<div class="footer_contacts_item_coors">
+									<div class="footer_contacts_item_coors_item_2">FLYER-CLUB.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer_contacts_item">
+							<div class="footer_contacts_item_info">
+								<img
+									src="assets/images/phone.jpg"
+									class="footer_contacts_item_coors_image"
+									alt="phone"
+								/>
+								<div class="footer_contacts_item_coors">
+									<div class="footer_contacts_item_coors_item_3">+ 1 888-564-9034</div>
+								</div>
+							</div>
+							<div class="footer_contacts_item_info">
+								<img
+									src="assets/images/message.jpg"
+									class="footer_contacts_item_coors_image"
+									alt="message"
+								/>
+								<div class="footer_contacts_item_coors">
+									<div class="footer_contacts_item_coors_item_3">info@flyer-club.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer_contacts_item">
+							<div class="footer_contacts_item_info footer_contacts_item_info_images">
+								<img
+									src="assets/images/facebook.png"
+									class="footer_contacts_item_coors_image"
+									alt="facebook"
+								/>
+								<img
+									src="assets/images/instagram.png"
+									class="footer_contacts_item_coors_image"
+									alt="instagram"
+								/>
+							</div>
+							<div class="footer_contacts_item_info footer_contacts_item_info_images">
+								<img
+									src="assets/images/linkedIn.png"
+									class="footer_contacts_item_coors_image"
+									alt="linkedIn"
+								/>
+								<img
+									src="assets/images/twitter.png"
+									class="footer_contacts_item_coors_image"
+									alt="twitter"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer_delimiter footer_delimiter_1"></div>
+
+				<div class="footer_all_rights">
+					<div class="footer_all_rights_row">
+						<div class="footer_all_rights_row_item">Privacy Policy</div>
+						<div class="footer_all_rights_row_item">Terms of Use</div>
+						<div class="footer_all_rights_row_item">Disclaimer</div>
+					</div>
+					<div class="footer_all_rights_row">© 2022 FLYER-CLUB, INC. All rights reserved.</div>
+				</div>
+
+				<div class="footer_delimiter footer_delimiter_2"></div>
+
+				<div class="footer_info">
+					*All prices shown are in US dollars and include all relevant taxes, fees, and surcharges. All prices
+					are "from" per person, based on business class travel during the weekdays (Monday through Thursday)
+					from the USA, and vary according to the service class selected, the city of departure, the airline,
+					and the route. The East Coast typically has the lowest transatlantic fares, whereas the West Coast
+					typically has the lowest transpacific fares. To avoid immediately competing with the travel
+					supplier's normal retail sales, Flyer Club is unable to identify some travel suppliers or itinerary
+					details online. Savings of up to 73% are shown off the full, unrestricted published fares of major
+					airlines, however exact savings will depend on each fare's specific regulations. Some airlines could
+					charge extra for extra baggage. The prices depend on whether there are seats available in the
+					relevant booking inventory. There are a limited number of seats, and some flights and dates may not
+					have them. The prices are adjustable, and our partner airlines currently offer free exchange and/or
+					cancellation. If a trip is canceled, clients will keep their travel credits with the issuing airline
+					for a year, minus airline fees, unless otherwise specified. If you trade, the fare difference can be
+					charged. The prices and the rules that apply to them are subject to change at any time and without
+					notice. There may be more limitations.
+				</div>
+			</section>
+		</footer>
 	</body>
 </html>
