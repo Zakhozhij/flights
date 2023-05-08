@@ -7,17 +7,32 @@ import "../css/advantages.css";
 import "../css/howItWorks.css";
 import "../css/flights.css";
 import "../css/footer.css";
+import Swiper from "swiper";
+import "swiper/css";
+let swiper;
+const slides_points = document.querySelectorAll(".slider_points_item");
+const slides_text = document.querySelectorAll(".slider_text_item");
 window.addEventListener("load", () => {
-    slider({
-		container: ".slider_slides_block",
-		slide: ".offer__slide",
-		nexArrow: ".slider_slides_next_arrow",
-		prevArrow: ".slider_slides_prev_arrow",
-		wrapper: ".offer__slider-wrapper",
-		field: ".offer_slider-inner",
+	swiper = new Swiper(".mySwiper", {
+		initialSlide: 0,
+		slidesPerView: 1,
+		spaceBetween: 0,
 	});
+	swiper.on("slideChange", () => {
+		setActiveSlideText();
+		setActivePagination();
+	});
+	setActiveSlideText();
+	setActivePagination();
 	getOffset();
-	
+});
+
+document.querySelector(".swiper-button-next").addEventListener(`click`, () => {
+	swiper.slideNext();
+});
+
+document.querySelector(".swiper-button-prev").addEventListener(`click`, () => {
+	swiper.slidePrev();
 });
 
 window.addEventListener(
@@ -35,73 +50,20 @@ function getOffset() {
 	document.querySelector(".footer").style.display = "block";
 }
 
-function slider({ container, slide, nexArrow, prevArrow, wrapper, field }) {
-	const prev = document.querySelector(prevArrow),
-		next = document.querySelector(nexArrow),
-		slides = document.querySelectorAll(slide),
-		slidesWrapper = document.querySelector(wrapper),
-		slidesField = document.querySelector(field),
-		width = window.getComputedStyle(slidesWrapper).width,
-		slider = document.querySelector(container);
+//Pagination slides settings
 
-	let slideIndex = 1;
-	let offset = 0;
-
-	slidesField.style.width = 100 * slides.length + "%";
-	slidesField.style.display = "flex";
-	slidesField.style.transition = "0.5s all";
-	slidesWrapper.style.overflow = "hidden";
-	slides.forEach((slide) => {
-		slide.style.width = width;
+slides_points.forEach((slide) => {
+	slide.addEventListener("click", async (e) => {
+		const slideTo = e.target.getAttribute("data-slide-to");
+		swiper.slideTo(slideTo - 1);
 	});
+});
 
-	slider.style.position = "relative";
-
-	let dots = document.querySelectorAll(".slider_points_item");
-
-	next.addEventListener("click", () => {
-		if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
-			offset = 0;
-		} else {
-			offset += +width.slice(0, width.length - 2);
-		}
-		slidesField.style.transform = `translateX(-${offset}px)`;
-		showSlides(++slideIndex);
-	});
-
-	prev.addEventListener("click", () => {
-		if (offset == 0) {
-			offset = +width.slice(0, width.length - 2) * (slides.length - 1);
-		} else {
-			offset -= +width.slice(0, width.length - 2);
-		}
-		slidesField.style.transform = `translateX(-${offset}px)`;
-		showSlides(--slideIndex);
-	});
-
-	showSlides(slideIndex);
-
-	function showSlides(i) {
-		if (i > slides.length) {
-			slideIndex = 1;
-		}
-
-		if (i < 1) {
-			slideIndex = slides.length;
-		}
-
-		dots.forEach((dot) => (dot.style.background = "#006dd233"));
-		dots[slideIndex - 1].style.background = "#006dd2";
-	}
-
-	dots.forEach((dot) => {
-		dot.addEventListener("click", (e) => {
-			const slideTo = e.target.getAttribute("data-slide-to");
-			slideIndex = slideTo;
-
-			offset = +width.slice(0, width.length - 2) * (slideTo - 1);
-			slidesField.style.transform = `translateX(-${offset}px)`;
-			showSlides(slideIndex);
-		});
-	});
+function setActiveSlideText() {
+	slides_text.forEach((slide) => (slide.style.display = "none"));
+	slides_text[swiper.activeIndex].style.display = "block";
+}
+function setActivePagination() {
+	slides_points.forEach((slide) => (slide.style.background = "#006dd233"));
+	slides_points[swiper.activeIndex].style.background = "#006dd2";
 }
