@@ -1,5 +1,5 @@
 .how_it_works{
-    
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,7 +176,25 @@
     }
 
 }
-
+@media (max-width: 375px) {
+	.how_it_works_img{
+        top:10%;
+        position: absolute;
+        height: 80%;
+        width: 100%;
+        z-index: -1;
+		background:url(../assets/images/clouds.jpg);
+    }
+    .how_it_works_img_1{
+        height: 50%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 62.5%);
+transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+    .how_it_works_img_2{
+        height: 50%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 62.5%);
+    }
+}
 
 @media (min-width: 200px) and (max-width: 1440px) {
 	.how_it_works {
