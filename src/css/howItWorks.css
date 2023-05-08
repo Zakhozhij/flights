@@ -167,7 +167,7 @@
         background: linear-gradient(180deg, #006DD2 -11.29%, #59C2FD 105.4%);
     }
     .how_it_works_way_item:after {
-        left: 116px;
+        left: 115px;
         top: 229px;
         border: 9px solid transparent; 
         border-top: 9px solid #3aa4ee;

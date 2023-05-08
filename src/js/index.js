@@ -1,3 +1,4 @@
+"use strict"
 import "../css/style.css";
 import "../css/promo.css";
 import "../css/form.css";

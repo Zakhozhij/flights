@@ -101,7 +101,7 @@
 
 @media (min-width: 200px) and (max-width: 1440px) {
 	.advantages {
-		width: calc(100% + (76.65 - 100) * ((100vw - 400px) / (1440px - 400)));
+		width: calc(100% + (76.65 - 100) * ((100vw - 400px) / (1440 - 400)));
 	}
 	
 	.advantages_title {

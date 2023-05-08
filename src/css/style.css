@@ -72,7 +72,7 @@ html {
 }
 @media (max-width: 768px) {
   .info_block{
-    top: 888px;
+     top: 923px;
   }
 }
 @media (max-width: 576px) {
@@ -81,5 +81,17 @@ html {
   }
   .city_img {
     top: 379.41px;
+  }
+}
+@media (max-width: 450px){
+
+  .info_block {
+      top: 893px;
+  }
+}
+@media (max-width: 320px){
+
+  .info_block {
+    top: 809px;
   }
 }

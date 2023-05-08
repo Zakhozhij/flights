@@ -151,6 +151,14 @@
 	}
 
 }
+@media (max-width: 350px) {
+	.slider_points_item {
+		width: 40px;
+	}
+	.swiper-button{
+		display: none;
+	}
+}
 @media (min-width: 200px) and (max-width: 1440px) {
 	.slider {
 		width: calc(100% + (82.87 - 100) * ((100vw - 400px) / (1440 - 400)));
