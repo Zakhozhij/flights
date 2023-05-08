@@ -1,6 +1,5 @@
 .footer {
-	position: relative;
-	display: none;
+    margin-top: 240px;
 	width: 100%;
 	min-height: 519px;
 	background: #f4f8fd;
@@ -8,58 +7,51 @@
 
 .footer_info {
 	background: #f4f8fd;
-	position: absolute;
+	position: relative;
 	width: 78.255%;
-	top: 67.24%;
-	right: 0;
-	left: 0;
-	margin: auto;
+	margin: 0 auto;
 	font-family: "Inter";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 11.5424px;
-	line-height: 17px;
+    display: block;
 	color: rgba(36, 36, 36, 0.72);
 }
 
 .footer_all_rights {
-	position: absolute;
-	width: 354px;
-	top: 43.2%;
-	right: 0;
-	left: 0;
-	margin: auto;
+	position: relative;
+	max-width: 370px;
+    width: 100%;
+	display: block;
+	margin: 0 auto;
+    margin-top: 26px;
+    margin-bottom: 26px;
 }
 .footer_all_rights_row {
 	display: flex;
 	flex-direction: row;
 	text-align: center;
 	justify-content: space-between;
+    
 }
 .footer_all_rights_row_item {
+    display: flex;
+    justify-content: center;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15.3899px;
-	line-height: 29px;
 	text-align: center;
 	color: #006dd2;
+    margin-bottom:4px;
 }
 
 .footer_delimiter {
-	position: absolute;
+	position: relative;
 	width: 78.3%;
 	height: 1.92px;
-	right: 0;
-	left: 0;
-	margin: auto;
-	top: 313.69px;
+    display: block;
+	margin: 0 auto;
 	background: #ffffff;
-}
-.footer_delimiter_1 {
-	top: 37.76%;
-}
-.footer_delimiter_2 {
-	top: 60.5%;
 }
 .footer_contacts_row {
 	width: 100%;
@@ -69,13 +61,11 @@
     flex-wrap: wrap;
 }
 .footer_contacts {
-	position: absolute;
-    height: 190px;
+	position: relative;
 	width: 78.255%;
-	top: 24px;
-	right: 0;
-	left: 0;
-	margin: auto;
+    margin:0 auto;
+    display: block;
+    padding: 24px;
 }
 .footer_contacts_item {
 	display: flex;
@@ -124,21 +114,18 @@
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14.428px;
-	line-height: 18px;
 	color: #242424;
 }
 .footer_contacts_item_coors_item_2 {
 	font-style: normal;
     font-weight: 400;
     font-size: 15.3899px;
-    line-height: 18px;
 	color: #242424;
 }
 .footer_contacts_item_coors_item_3 {
 	font-style: normal;
     font-weight: 400;
     font-size: 15.3899px;
-    line-height: 18px;
 	color: #242424;
 }
 .footer_contacts_item_info_images{
@@ -151,26 +138,7 @@
     margin-left: 10px;
 }
 @media (max-width: 1200px) {
-    .footer{
-        height: 545px;
-    }
-    .footer_contacts {
-        height: 239px;
-        width: 60%;
-    }
-    .footer_delimiter_1 {
-        top: 52.76%;
-    }
-    .footer_delimiter_2 {
-        top: 70.5%;
-    }
-    .footer_info {
-        top: 77.24%;
-    }
-    
-    .footer_all_rights {
-        top: 57.2%;
-    }
+   
     .footer_contacts_item_info_images {
         display: flex;
         flex-direction: row;
@@ -186,9 +154,7 @@
 }
 
 @media (max-width: 768px) {
-    .footer{
-        height: 812px;
-    }
+  
     .footer_contacts_row {
         flex-direction: column;
         align-items: flex-start;
@@ -196,7 +162,6 @@
 
 
     .footer_contacts {
-        height: 440px;
         width: 78.255%;
     }
     .footer_contacts_item:last-child{
@@ -204,41 +169,48 @@
         flex-direction: row;
         justify-content: flex-start;
     }
-    .footer_delimiter_2 {
-        top: 66.5%;
-    }
-    .footer_info {
-        top: 72.24%;
-    }
     .footer_contacts_item_info_images {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
     }
     .footer_contacts_item_info_images img{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
         margin-left: 10px;
     }
 }
 
 @media (max-width: 576px) {
+   
     .footer_all_rights {
         width: 78.255%;
     }
-    /* .footer_all_rights_row{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } */
-    .footer_all_rights {
-        top: 55.2%;
+
+    .footer_contacts_item_1_info_1{
+        font-size: 11.428px;
     }
-    .footer_delimiter_2 {
-        top: 70.5%;
+    .footer_contacts_item_1_info_2{
+        font-size: 10.5805px;
     }
-    .footer_info {
-        top: 74.24%;
+    
+
+    .footer_contacts_item_coors_item_1 {
+        font-size: 11.428px;
+    }
+    .footer_contacts_item_coors_item_2 {
+        font-size: 12.3899px;
+    }
+    .footer_contacts_item_coors_item_3 {
+         font-size: 12.3899px;
+    }
+    .footer_all_rights_row_item {
+        font-size: 12.3899px;
+    }
+    
+    .footer_all_rights_row {
+        font-size: 12.3899px;
+    }
+    .footer_contacts_item_coors_image{
+        margin-left: 0;
+        margin-bottom: 0;
     }
 }

@@ -30,15 +30,11 @@ html {
   align-items: center;
   padding: 0px;
   gap: 64px;
-
-  position: absolute;
+  position: relative;
   max-width: 1255px;
   z-index: 0;
   width: 90%;
-  right: 0;
-	left: 0;
-	margin: auto;
-  top: 808px;
+	margin:0 auto;
 }
 .leave_request_button{
   display: flex;
@@ -61,18 +57,9 @@ html {
   cursor: pointer;
 
 }
-@media (max-width: 1439px) {
-
-}
-@media (max-width: 1200px) {
-
-}
 @media (max-width: 992px) {
-
-}
-@media (max-width: 768px) {
-  .info_block{
-     top: 923px;
+  .city_img {
+    top: 379.41px;
   }
 }
 @media (max-width: 576px) {
@@ -80,18 +67,19 @@ html {
     gap: 30px;
   }
   .city_img {
-    top: 379.41px;
-  }
+    height: 732.88px;
+    top: 324.41px;
+}
 }
 @media (max-width: 450px){
-
-  .info_block {
-      top: 893px;
+  .city_img {
+    top: 210.41px;
   }
 }
-@media (max-width: 340px){
 
-  .info_block {
-    top: 809px;
+@media (max-width: 340px){
+ 
+  .city_img {
+    top: 210.41px;
   }
 }

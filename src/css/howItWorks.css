@@ -86,6 +86,8 @@
 .how_it_works_leave_request{
     display: flex;
     margin: 0 auto;
+    position: relative;
+   
 }
 
 .blur_line{

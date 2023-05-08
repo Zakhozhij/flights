@@ -1,33 +1,31 @@
 .promo {
-	position: absolute;
+	position: relative;
 	max-width: 1346.15px;
 	width: 96%;
-	height: 680px;
-	top: 19px;
-	right: 0;
-	left: 0;
-	margin: auto;
+	min-height: 680px;
+
+	margin: 0 auto;
 	background: linear-gradient(0deg, rgba(0, 23, 105, 0.36), rgba(0, 23, 105, 0.36)),
 		url(../assets/images/istockphoto-1177037281-1024x1024-transformed.jpg);
 	border-radius: 30px;
+	margin-top: 19px;
 	/* transform: matrix(-1, 0, 0, 1, 0, 0); */
 }
-
+.menu_block {
+	position: relative;
+	display: block;
+	top: 28px;
+}
 .menu {
-	position: absolute;
 	max-width: 1140px;
 	width: 84%;
 	height: 60px;
-	right: 0;
-	left: 0;
-	margin: auto;
-	top: 28px;
+	margin: 0 auto;
 	padding: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0px;
 }
 .menu_logo {
 	width: 197px;
@@ -69,7 +67,14 @@
 	border: 0;
 	width: 100%;
 }
-
+.promo_body {
+	position: relative;
+	display: block;
+	max-width: 1140px;
+	width: 84%;
+	margin: 0 auto;
+	top: 55px;
+}
 .promo_banner {
 	display: flex;
 	flex-direction: column;
@@ -77,10 +82,8 @@
 	padding: 0px;
 	gap: 18px;
 	left: 8%;
-	position: absolute;
 	max-width: 557px;
 	width: 51%;
-	top: 121.26px;
 }
 .promo_banner .title {
 	font-style: normal;
@@ -119,15 +122,15 @@
 	padding: 0px;
 	margin-top: 16px;
 	width: 100%;
-	gap:3.6%;
+	gap: 3.6%;
 }
 .partners_top_rated {
 	position: relative;
 	max-width: 200px;
 	width: 100%;
 	display: flex;
-	align-items:flex-end;
-	gap:5%;
+	align-items: flex-end;
+	gap: 5%;
 }
 .partners_top_rated img {
 	height: 24px;
@@ -136,23 +139,22 @@
 	min-width: 65px;
 	max-width: 138.59px;
 	max-height: 69.65px;
-	width:100%;
+	width: 100%;
 }
 .partners_image_2 {
 	min-width: 35px;
 	max-width: 72.61px;
 	max-height: 46.54px;
-	width:100%;
+	width: 100%;
 }
 .partners_image_3 {
 	min-width: 45px;
 	max-width: 97.73px;
 	max-height: 24px;
-	width:100%;
+	width: 100%;
 }
 
 .top_rated_text {
-	
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -167,8 +169,8 @@
 	position: absolute;
 	width: 100px;
 	height: 100px;
-	right: 3.2%;
-	top: 48.5%;
+	right: -67px;
+	bottom: 69px;
 	border-radius: 50%;
 	background: #ffffff;
 	box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.12);
@@ -212,14 +214,21 @@
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 }
-
+.flyer_club_block {
+	display: flex;
+	justify-content: flex-end;
+	width: auto;
+	align-items: flex-end;
+	position: relative;
+	right: 100px;
+	transform: translateY(-50px);
+}
 .flyer_club {
-	position: absolute;
+	position: relative;
 	max-width: 408px;
-	width: 100%;
 	height: 96.52px;
-	right: 9%;
-	bottom: 28%;
+	bottom: 0%;
+	transform: translateY(60%);
 }
 
 .flyer_club_label {
@@ -244,7 +253,7 @@
 }
 .flyer_club_label_name {
 	max-width: 43px;
-	width:100%;
+	width: 100%;
 	height: 15px;
 	font-style: normal;
 	font-weight: 700;
@@ -266,7 +275,7 @@
 .price {
 	display: flex;
 	flex-direction: column;
-	align-items:flex-start;
+	align-items: flex-start;
 	justify-content: center;
 	max-width: 156px;
 	width: 100%;
@@ -310,7 +319,6 @@
 }
 
 .discount {
-	max-width: 198px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -366,22 +374,20 @@
 	.menu {
 		width: 92%;
 	}
+	.flyer_club_block {
+		transform: translateY(0px);
+		top: 20px;
+	}
+	.promo_body {
+		width: 92%;
+	}
+
 	.menu_logo img {
 		width: 167px;
 		height: 50px;
 	}
 	.menu_list .menu_list_item button {
 		padding: 15px 36px;
-	}
-	.promo_banner {
-		left: 4%;
-	}
-	.flyer_club {
-		right: 6%;
-	}
-	.elipse {
-		top: 44.5%;
-		right: 2.2%;
 	}
 }
 
@@ -400,20 +406,16 @@
 		font-size: 14px;
 	}
 
-	.promo_banner {
-		left: 4%;
-	}
 	.description {
 		font-size: 14px;
-	}
-	.flyer_club {
-		right: 4%;
-		top: 61%;
 	}
 }
 @media (max-width: 768px) {
 	.promo_banner {
 		gap: 9px;
+	}
+	.flyer_club_block {
+		top: 40px;
 	}
 	.sale_description {
 		font-size: 18px;
@@ -423,12 +425,6 @@
 		line-height: 19px;
 	}
 
-	.flyer_club {
-		top: 58%;
-	}
-	.elipse {
-		top: 41%;
-	}
 	.menu_list .menu_list_item_link {
 		font-size: 12px;
 	}
@@ -456,13 +452,18 @@
 	.hamburger {
 		display: block;
 	}
-	.flyer_club {
+
+	.flyer_club_block {
+		top: 40px;
+	}
+	.flyer_club_block {
+		display: block;
 		width: 92%;
-		max-width: 300px;
-		height: 79px;
-		top: 58%;
-		right: 4%;
-		padding: 0;
+		margin: 0 auto;
+		right: 0;
+	}
+	.flyer_club {
+		margin: 0 auto;
 	}
 	.flyer_club_content {
 		height: 69.71px;
@@ -472,7 +473,7 @@
 		gap: 1.48px;
 		height: 39.48px;
 	}
-	
+
 	.price_total {
 		gap: 4.43px;
 		font-size: 12px;
@@ -482,13 +483,12 @@
 		font-size: 16px;
 		color: #2e6bcb;
 	}
-	
+
 	.price_retail {
 		gap: 4.43px;
 		height: 18px;
 		font-size: 11px;
 	}
-
 
 	.discount {
 		padding: 8.85294px;
@@ -496,9 +496,7 @@
 		height: 53.71px;
 		border-radius: 12.5417px;
 	}
-	.discount_icon{
-		display: none;
-	}
+
 	.flyer_club_label {
 		padding: 4px 14px 4px 10px;
 		gap: 3.04px;
@@ -526,10 +524,21 @@
 	.discount_savings {
 		font-size: 14px;
 	}
-	.sale_description{
+	.sale_description {
+		display: none;
+	}
+	.discount_icon {
 		display: none;
 	}
 }
+
+@media (max-width: 270px) {
+	.menu_logo img {
+		width: 120px;
+		height: 40px;
+	}
+}
+
 /* @media (max-width: 350px) {
 	.discount_price {
 		font-size: 12px;
@@ -550,7 +559,7 @@
 	}
 } */
 @media (max-width: 340px) {
-	.flyer_club{
+	.flyer_club {
 		display: none;
 	}
 }
@@ -561,16 +570,12 @@
 	.promo_banner .title {
 		font-size: calc(16px + (36 - 16) * ((100vw - 200px) / (1440 - 200)));
 	}
-	.partners img{
-		width: calc(30% + (100 - 50) * ((100vw - 200px) / (1440 - 200)));
+	.partners img {
+		width: calc(20% + (100 - 20) * ((100vw - 400px) / (1440 - 400)));
 	}
 	.top_rated_text {
 		font-size: calc(12px + (16 - 12) * ((100vw - 400px) / (1440 - 400)));
 	}
 }
 
-@media (min-width: 300px) and (max-width: 500px) {
-	.promo{
-		height: calc(570px + (680 - 570) * ((100vw - 300px) / (500 - 300)));
-	}
-}
+

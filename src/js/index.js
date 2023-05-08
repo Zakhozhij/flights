@@ -39,16 +39,16 @@ document.querySelector(".swiper-button-prev").addEventListener(`click`, () => {
 window.addEventListener(
 	`resize`,
 	() => {
-		document.querySelector(".footer").style.display = "none";
 		getOffset();
 	},
 	false
 );
 
 function getOffset() {
-	const rect = document.querySelector(".choose_flight").getBoundingClientRect().top + 100 + window.pageYOffset;
-	document.querySelector("main").style.height = rect + "px";
-	document.querySelector(".footer").style.display = "block";
+	const form_position = document.querySelector(".form_free_quote").getBoundingClientRect().bottom;
+	const promo_position = document.querySelector(".promo").getBoundingClientRect().bottom;
+	document.querySelector(".info_block").style.top = (form_position-promo_position+35) + "px";
+	document.querySelector(".footer").style.marginTop=(form_position-promo_position+35) +240 + "px";
 }
 
 //Pagination slides settings
