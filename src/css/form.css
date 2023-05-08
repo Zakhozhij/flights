@@ -148,8 +148,14 @@
 		top: 494px;
 	} 
 }
-@media (max-width: 320px) {
+@media (max-width: 340px) {
 	.form_free_quote {
 		top: 418px;
    } 
+}
+
+@media (min-width: 200px) and (max-width: 1440px) {
+	.form_free_quote {
+		width: calc(90% + (62 - 90) * ((100vw - 200px) / (1440 - 200)));
+	}
 }

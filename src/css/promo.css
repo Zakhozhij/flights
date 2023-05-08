@@ -387,7 +387,7 @@
 
 @media (max-width: 992px) {
 	.menu {
-		width: 96%;
+		width: 92%;
 	}
 	.menu_logo img {
 		width: 140px;
@@ -401,17 +401,14 @@
 	}
 
 	.promo_banner {
-		left: 2%;
+		left: 4%;
 	}
 	.description {
 		font-size: 14px;
 	}
 	.flyer_club {
-		right: 2%;
+		right: 4%;
 		top: 61%;
-	}
-	.elipse {
-		right: 2%;
 	}
 }
 @media (max-width: 768px) {
@@ -460,14 +457,12 @@
 		display: block;
 	}
 	.flyer_club {
-		width: 98%;
+		width: 92%;
+		max-width: 300px;
 		height: 79px;
 		top: 58%;
-		right: 0;
-		left: 0;
-		margin: auto;
-		padding: 8px 8px 8px 13px;
-		gap: 11.8px;
+		right: 4%;
+		padding: 0;
 	}
 	.flyer_club_content {
 		height: 69.71px;
@@ -528,11 +523,14 @@
 	}
 }
 @media (max-width: 450px) {
+	.discount_savings {
+		font-size: 14px;
+	}
 	.sale_description{
 		display: none;
 	}
 }
-@media (max-width: 350px) {
+/* @media (max-width: 350px) {
 	.discount_price {
 		font-size: 12px;
 	}
@@ -547,11 +545,11 @@
 		font-size: 12px;
 	}
 	.flyer_club{
-		top: 64%;
-		padding: 8px 8px 8px 4px;
+		top: 62%;
+		
 	}
-}
-@media (max-width: 320px) {
+} */
+@media (max-width: 340px) {
 	.flyer_club{
 		display: none;
 	}
