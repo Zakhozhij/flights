@@ -207,7 +207,7 @@ transform: matrix(1, 0, 0, -1, 0, 0);
   
 }
 
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1440px) {
 	
     .how_it_works_way_item {
 		width: calc(150px + (248 - 150) * ((100vw - 768px) / (1440 - 768)));
