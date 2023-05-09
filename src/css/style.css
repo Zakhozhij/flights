@@ -6,7 +6,9 @@
 html {
   overflow-x: hidden;
 }
-
+body{
+  background: #FFFFFF;
+}
 .container {
   display: block;
   margin: 0 auto;
