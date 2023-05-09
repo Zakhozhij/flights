@@ -16,6 +16,7 @@
 	font-size: 11.5424px;
     display: block;
 	color: rgba(36, 36, 36, 0.72);
+    top:33px;
 }
 
 .footer_all_rights {
@@ -65,17 +66,18 @@
 	width: 78.255%;
     margin:0 auto;
     display: block;
-    padding: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .footer_contacts_item {
 	display: flex;
     flex-direction: column;
-    justify-content: space-around;
-	width: 215px;
+    justify-content: center;
+    align-items:space-between;
+	
     font-style: normal;
     font-weight: 400;
     color: #242424;
-    line-height: 23px;
 }
 
 
@@ -134,8 +136,8 @@
     justify-content: flex-start;
 }
 
-.footer_contacts_item_info_images img{
-    margin-left: 10px;
+.footer_contacts_item_coors_image_right{
+    margin-left:14px;
 }
 @media (max-width: 1200px) {
    
@@ -144,43 +146,36 @@
         flex-direction: row;
         justify-content: flex-start;
     }
-    .footer_contacts_item_info_images img{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-left: 10px;
-        margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+    .footer_contacts {
+        width: 62.255%;
+    }
+    .footer_contacts_item {
+        width: 45%;
+    }
+    .footer_contacts_row {
+        gap:20px;
     }
 }
 
-@media (max-width: 768px) {
-  
-    .footer_contacts_row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-
+@media (max-width: 768px) { 
     .footer_contacts {
         width: 78.255%;
     }
-    .footer_contacts_item:last-child{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .footer_contacts_item_info_images {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .footer_contacts_item_info_images img{
-        margin-left: 10px;
-    }
-}
 
+}
+    
 @media (max-width: 576px) {
-   
+    .footer_contacts_item {
+        width: 100%;
+    }
+    .footer_contacts_row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap:0;
+    }
     .footer_all_rights {
         width: 78.255%;
     }
@@ -209,8 +204,11 @@
     .footer_all_rights_row {
         font-size: 12.3899px;
     }
-    .footer_contacts_item_coors_image{
-        margin-left: 0;
-        margin-bottom: 0;
+    .footer_contacts_item:last-child{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .footer_contacts_item_info_images:last-child{
+        margin-left: 14px;
     }
 }
