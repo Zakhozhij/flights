@@ -67,6 +67,13 @@
 	border: 0;
 	width: 100%;
 }
+.menu_close{
+	display: none;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	cursor: pointer;
+}
 .promo_body {
 	position: relative;
 	display: block;
@@ -364,11 +371,15 @@
 	display: none;
 	width: 40px;
 	height: 40px;
+	cursor: pointer;
 }
 .hamburger img {
 	width: 30x;
 	height: 30px;
 }
+
+
+
 
 @media (max-width: 1200px) {
 	.menu {
@@ -438,8 +449,41 @@
 	.elipse {
 		display: none;
 	}
-	.menu ul {
-		display: none;
+	.menu_list{
+		position: fixed;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		max-width: 375px;
+		height: 100vh;
+		padding: 20px 15px;
+		background-color: rgba(73,94,146, .9);
+		transition: 0.6s all;
+		z-index: 2;
+	}
+	.menu_list_active{
+		left: 0;
+	}
+	.menu_list_item{
+		padding-right: 0;
+		border: none;
+		margin: 10px 0;
+	}
+	.menu_close{
+		display: block;
+		
+	}
+	.menu_list .menu_list_item button {
+		padding: 15px;
+		height: 50px;
+		font-size: 16px;
+	}
+
+	.menu_list .menu_list_item_link{
+		font-size: 20px;
 	}
 	.promo_banner {
 		gap: 9px;
@@ -451,6 +495,7 @@
 	}
 	.hamburger {
 		display: block;
+
 	}
 
 	.flyer_club_block {

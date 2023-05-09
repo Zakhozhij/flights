@@ -26,6 +26,27 @@ window.addEventListener("load", () => {
 	setActiveSlideText();
 	setActivePagination();
 	getOffset();
+
+
+	const menu = document.querySelector('.menu_list'),
+    menuItem = document.querySelectorAll('.menu_list_item'),
+    hamburger = document.querySelector('.hamburger'),
+	menu_close = document.querySelector('.menu_close');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.add('menu_list_active');
+    });
+	menu_close.addEventListener('click', () => {
+        menu.classList.remove('menu_list_active');
+    });
+    menuItem.forEach(item => {
+        item.addEventListener('click', () => {
+            menu.classList.toggle('menu_list_active');
+        })
+    })
+
+
+
 });
 
 document.querySelector(".swiper-button-next").addEventListener(`click`, () => {
