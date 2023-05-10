@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 import "../css/style.css";
 import "../css/promo.css";
 import "../css/form.css";
@@ -7,9 +7,36 @@ import "../css/slider.css";
 import "../css/advantages.css";
 import "../css/howItWorks.css";
 import "../css/flights.css";
+import "../css/reviews.css";
 import "../css/footer.css";
+import "../css/elipse.css";
 import Swiper from "swiper";
 import "swiper/css";
+
+
+const fadeIn = (el, timeout, display) => {
+	el.style.opacity = 0;
+	el.style.display = display || "block";
+	el.style.transition = `opacity ${timeout}ms`;
+	setTimeout(() => {
+		el.style.opacity = 1;
+	}, 10);
+};
+
+const fadeOut = (el, timeout) => {
+	el.style.opacity = 1;
+	el.style.transition = `opacity ${timeout}ms`;
+	el.style.opacity = 0;
+
+	setTimeout(() => {
+		el.style.display = "none";
+	}, timeout);
+};
+
+
+
+
+
 let swiper;
 const slides_points = document.querySelectorAll(".slider_points_item");
 const slides_text = document.querySelectorAll(".slider_text_item");
@@ -23,30 +50,32 @@ window.addEventListener("load", () => {
 		setActiveSlideText();
 		setActivePagination();
 	});
+
 	setActiveSlideText();
 	setActivePagination();
 	getOffset();
 
+	const menu = document.querySelector(".menu_list"),
+		menuItem = document.querySelectorAll(".menu_list_item"),
+		hamburger = document.querySelector(".hamburger"),
+		menu_close = document.querySelector(".menu_close");
 
-	const menu = document.querySelector('.menu_list'),
-    menuItem = document.querySelectorAll('.menu_list_item'),
-    hamburger = document.querySelector('.hamburger'),
-	menu_close = document.querySelector('.menu_close');
+	hamburger.addEventListener("click", () => {
+		menu.classList.add("menu_list_active");
+	});
+	menu_close.addEventListener("click", () => {
+		menu.classList.remove("menu_list_active");
+	});
+	menuItem.forEach((item) => {
+		item.addEventListener("click", () => {
+			menu.classList.toggle("menu_list_active");
+		});
+	});
 
-    hamburger.addEventListener('click', () => {
-        menu.classList.add('menu_list_active');
-    });
-	menu_close.addEventListener('click', () => {
-        menu.classList.remove('menu_list_active');
-    });
-    menuItem.forEach(item => {
-        item.addEventListener('click', () => {
-            menu.classList.toggle('menu_list_active');
-        })
-    })
-
-
-
+	let preloader = document.querySelector("#preloader"),
+		loader = document.querySelector("#preloader #loader");
+		fadeOut(loader, 0);
+		fadeOut(preloader, 200);
 });
 
 document.querySelector(".swiper-button-next").addEventListener(`click`, () => {
@@ -68,8 +97,8 @@ window.addEventListener(
 function getOffset() {
 	const form_position = document.querySelector(".form_free_quote").getBoundingClientRect().bottom;
 	const promo_position = document.querySelector(".promo").getBoundingClientRect().bottom;
-	document.querySelector(".info_block").style.top = (form_position-promo_position+35) + "px";
-	document.querySelector(".footer").style.marginTop=(form_position-promo_position+35) +240 + "px";
+	document.querySelector(".info_block").style.top = form_position - promo_position + 35 + "px";
+	document.querySelector(".footer").style.marginTop = form_position - promo_position + 35 + 240 + "px";
 }
 
 //Pagination slides settings
@@ -89,3 +118,6 @@ function setActivePagination() {
 	slides_points.forEach((slide) => (slide.style.background = "#006dd233"));
 	slides_points[swiper.activeIndex].style.background = "#006dd2";
 }
+//preloader
+
+

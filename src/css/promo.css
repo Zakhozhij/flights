@@ -172,55 +172,7 @@
 	color: #ffffff;
 }
 
-.elipse {
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	right: -67px;
-	bottom: 69px;
-	border-radius: 50%;
-	background: #ffffff;
-	box-shadow: 0px 9px 25px rgba(0, 0, 0, 0.12);
-}
-.call-bell {
-	position: relative;
-}
-.call-bell img {
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	left: 38px;
-	top: 9.5px;
-}
-.elipse_online {
-	position: absolute;
-	width: 85px;
-	height: 24px;
-	left: 7.5px;
-	top: 33.5px;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 24px;
-	color: #242424;
-}
-.free_call_back {
-	position: absolute;
-	width: 74.63px;
-	height: 33px;
-	left: 12.69px;
-	top: 57.5px;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 12px;
-	line-height: 16px;
-	text-align: center;
-	text-transform: uppercase;
-	background: linear-gradient(180deg, #006dd2 -11.29%, #59c2fd 105.4%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-}
+
 .flyer_club_block {
 	display: flex;
 	justify-content: flex-end;
