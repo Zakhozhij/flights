@@ -2,9 +2,10 @@
     position: fixed;
     width: 100%;
     top:33.5%;
-    z-index: 100;
+   
 }
 .call_back .container{
+    position: relative;
     background: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: flex-end;
@@ -14,7 +15,6 @@
 }
 .elipse {
 	display: block;
-    z-index: 10;
     width: 100px;
     height: 100px;
     border-radius: 50%;

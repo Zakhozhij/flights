@@ -8,6 +8,7 @@ import "../css/advantages.css";
 import "../css/howItWorks.css";
 import "../css/flights.css";
 import "../css/reviews.css";
+import "../css/partners.css";
 import "../css/footer.css";
 import "../css/elipse.css";
 import Swiper from "swiper";
@@ -32,7 +33,7 @@ const fadeOut = (el, timeout) => {
 	}, timeout);
 };
 
-let swiper;
+let swiper,swiperPartners;
 const slides_points = document.querySelectorAll(".slider_points_item");
 const slides_text = document.querySelectorAll(".slider_text_item");
 window.addEventListener("load", () => {
@@ -45,7 +46,30 @@ window.addEventListener("load", () => {
 		setActiveSlideText();
 		setActivePagination();
 	});
+	swiperPartners = new Swiper(".mySwiper2", {
+		initialSlide: 0,
+		slidesPerView: 11,
+		breakpoints: {
+			200: {
+				slidesPerView: 2
+		 	},
+			400: {
+				slidesPerView: 4
+		 	},
+			650: {
+				slidesPerView: 7 
+		 	},
+	 
+			950: {
+       			slidesPerView: 9 
+			},
+			1200: {
+				slidesPerView: 11 
+		 },
+		}
 
+
+	});
 	setActiveSlideText();
 	setActivePagination();
 	getOffset();
