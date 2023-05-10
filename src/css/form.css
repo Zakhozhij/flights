@@ -40,7 +40,7 @@
 	color: #006dd2;
 	margin-bottom: 10px;
 }
-.form {
+.form_free_quote_form {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
@@ -90,13 +90,6 @@
 	line-height: 24px;
 	opacity: 0.3;
 	color: rgba(36, 36, 36, 0.72);
-}
-#phone_number::placeholder {
-	background: url(../assets/images/us.png);
-	background-repeat: no-repeat;
-	opacity: 1;
-	padding-left: 20px;
-	color: rgba(36, 36, 36, 0.2);
 }
 .form_submit {
 	display: flex;

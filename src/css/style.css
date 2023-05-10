@@ -10,6 +10,7 @@ html {
 body{
   background: #FFFFFF;
 }
+
 .container {
   display: block;
   margin: 0 auto;
@@ -112,6 +113,24 @@ body{
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
+.section_title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	text-align: center;
+	color: #242424;
+}
+.section_title_highlight{
+	background: linear-gradient(
+		180deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(33, 66, 147, 1) 6%,
+		rgba(0, 212, 255, 1) 100%,
+		rgba(0, 212, 255, 1) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
 @-webkit-keyframes spin {
   0% {
@@ -163,5 +182,11 @@ body{
  
   .city_img {
     top: 210.41px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 1440px) {
+  .section_title {
+    font-size: calc(16px + (36 - 16) * ((100vw - 200px) / (1440 - 200)));
   }
 }

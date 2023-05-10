@@ -1,4 +1,5 @@
 "use strict";
+import 'intl-tel-input/build/css/intlTelInput.css';
 import "../css/style.css";
 import "../css/promo.css";
 import "../css/form.css";
@@ -8,9 +9,14 @@ import "../css/advantages.css";
 import "../css/howItWorks.css";
 import "../css/flights.css";
 import "../css/reviews.css";
+import "../css/formsection.css";
 import "../css/partners.css";
 import "../css/footer.css";
 import "../css/elipse.css";
+
+import intlTelInput from 'intl-tel-input';
+
+
 import Swiper from "swiper";
 import "swiper/css";
 
@@ -36,7 +42,25 @@ const fadeOut = (el, timeout) => {
 let swiper,swiperPartners;
 const slides_points = document.querySelectorAll(".slider_points_item");
 const slides_text = document.querySelectorAll(".slider_text_item");
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
+
+	const phone_number = document.querySelector("#phone_number");
+	const iti = intlTelInput(phone_number);
+	phone_number.addEventListener("countrychange", function(e, countryData) {
+		phone_number.value=iti.getSelectedCountryData().dialCode;
+	});
+	phone_number.value=iti.getSelectedCountryData().dialCode;
+
+
+	const phoneFormHome = document.querySelector("#phoneFormHome");
+	const itiPhoneFormHome = intlTelInput(phoneFormHome);
+	phoneFormHome.addEventListener("countrychange", function(e, countryData) {
+		phoneFormHome.value=itiPhoneFormHome.getSelectedCountryData().dialCode;
+	});
+	phoneFormHome.value=itiPhoneFormHome.getSelectedCountryData().dialCode;
+
+
+
 	swiper = new Swiper(".mySwiper", {
 		initialSlide: 0,
 		slidesPerView: 1,

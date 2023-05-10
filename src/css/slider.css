@@ -165,9 +165,7 @@
 	.slider {
 		width: calc(100% + (82.87 - 100) * ((100vw - 400px) / (1440 - 400)));
 	}
-	.slider_title {
-		font-size: calc(16px + (36 - 16) * ((100vw - 200px) / (1440 - 200)));
-	}
+	
 	.slider_menu {
 		font-size: calc(12px + (24 - 12) * ((100vw - 200px) / (1440 - 200)));
 	}

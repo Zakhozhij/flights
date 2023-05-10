@@ -9,25 +9,8 @@
 	width:80%;
 	height: auto;
 }
-.advantages_title {
-	font-style: normal;
-	font-weight: 700;
-	font-size: 36px;
-	/* identical to box height, or 125% */
-	text-align: center;
-	color: #242424;
-}
-.advantages_title span {
-	background: linear-gradient(
-		180deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(33, 66, 147, 1) 6%,
-		rgba(0, 212, 255, 1) 100%,
-		rgba(0, 212, 255, 1) 100%
-	);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
+
+
 .advantages_block {
 	display: flex;
 	flex-direction: row;
