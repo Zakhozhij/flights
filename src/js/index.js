@@ -13,7 +13,6 @@ import "../css/elipse.css";
 import Swiper from "swiper";
 import "swiper/css";
 
-
 const fadeIn = (el, timeout, display) => {
 	el.style.opacity = 0;
 	el.style.display = display || "block";
@@ -32,10 +31,6 @@ const fadeOut = (el, timeout) => {
 		el.style.display = "none";
 	}, timeout);
 };
-
-
-
-
 
 let swiper;
 const slides_points = document.querySelectorAll(".slider_points_item");
@@ -72,10 +67,26 @@ window.addEventListener("load", () => {
 		});
 	});
 
+	let h_hght = document.querySelector("header").offsetHeight; // высота шапки
+	let h_mrg = 0; // отступ когда шапка уже не видна
+	window.addEventListener("scroll", () => {
+		
+		let top = window.pageYOffset;
+		const elem = document.querySelector("header");
+		const nav = document.querySelector(".menu_block");
+		if (top + h_mrg < h_hght) {
+			elem.style.top=(35 - top) + "px" ;
+			nav.style.cssText="background:#00000000;";
+		} else {
+			elem.style.top="10px";
+			nav.style.cssText="background:linear-gradient(0deg, #2e6bcb, #2e6bcb), #ffffff;";
+		}
+	});
+
 	let preloader = document.querySelector("#preloader"),
 		loader = document.querySelector("#preloader #loader");
-		fadeOut(loader, 0);
-		fadeOut(preloader, 200);
+	fadeOut(loader, 0);
+	fadeOut(preloader, 200);
 });
 
 document.querySelector(".swiper-button-next").addEventListener(`click`, () => {
@@ -119,5 +130,3 @@ function setActivePagination() {
 	slides_points[swiper.activeIndex].style.background = "#006dd2";
 }
 //preloader
-
-

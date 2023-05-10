@@ -2,14 +2,15 @@
     position: fixed;
     width: 100%;
     top:33.5%;
-    
+    z-index: 100;
 }
 .call_back .container{
     background: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: flex-end;
     max-width: 1292px;
-    width: 90%;;
+    width: 90%;
+    
 }
 .elipse {
 	display: block;
