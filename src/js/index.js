@@ -1,9 +1,7 @@
 "use strict";
-import 'intl-tel-input/build/css/intlTelInput.css';
 import "../css/style.css";
 import "../css/promo.css";
 import "../css/form.css";
-
 import "../css/slider.css";
 import "../css/advantages.css";
 import "../css/howItWorks.css";
@@ -13,23 +11,38 @@ import "../css/formsection.css";
 import "../css/partners.css";
 import "../css/footer.css";
 import "../css/elipse.css";
+import "../css/modal_booking.css";
+import "./phoneNumber.js";
+import "./validation.js"
+import "./modal.js"
+import "./sliders.js"
+import "./menu.js"
 
-import intlTelInput from 'intl-tel-input';
+window.addEventListener("DOMContentLoaded", () => {
+	getOffset();
+	//hide preloader
+	let preloader = document.querySelector("#preloader"),
+		loader = document.querySelector("#preloader #loader");
+	fadeOut(loader, 0);
+	fadeOut(preloader, 300);
 
+	document.querySelectorAll(".modal").forEach((item) => {
+		item.style.transition = `0.3s all`;
+	});
+	document.querySelector(".overlay").style.transition = `0.3s all`;
+});
 
-import Swiper from "swiper";
-import "swiper/css";
-
-const fadeIn = (el, timeout, display) => {
+//preloader
+function fadeIn(el, timeout, display) {
 	el.style.opacity = 0;
 	el.style.display = display || "block";
 	el.style.transition = `opacity ${timeout}ms`;
 	setTimeout(() => {
 		el.style.opacity = 1;
 	}, 10);
-};
+}
 
-const fadeOut = (el, timeout) => {
+function fadeOut(el, timeout) {
 	el.style.opacity = 1;
 	el.style.transition = `opacity ${timeout}ms`;
 	el.style.opacity = 0;
@@ -37,114 +50,8 @@ const fadeOut = (el, timeout) => {
 	setTimeout(() => {
 		el.style.display = "none";
 	}, timeout);
-};
-
-let swiper,swiperPartners;
-const slides_points = document.querySelectorAll(".slider_points_item");
-const slides_text = document.querySelectorAll(".slider_text_item");
-window.addEventListener("DOMContentLoaded", () => {
-
-	const phone_number = document.querySelector("#phone_number");
-	const iti = intlTelInput(phone_number);
-	phone_number.addEventListener("countrychange", function(e, countryData) {
-		phone_number.value=iti.getSelectedCountryData().dialCode;
-	});
-	phone_number.value=iti.getSelectedCountryData().dialCode;
-
-
-	const phoneFormHome = document.querySelector("#phoneFormHome");
-	const itiPhoneFormHome = intlTelInput(phoneFormHome);
-	phoneFormHome.addEventListener("countrychange", function(e, countryData) {
-		phoneFormHome.value=itiPhoneFormHome.getSelectedCountryData().dialCode;
-	});
-	phoneFormHome.value=itiPhoneFormHome.getSelectedCountryData().dialCode;
-
-
-
-	swiper = new Swiper(".mySwiper", {
-		initialSlide: 0,
-		slidesPerView: 1,
-		spaceBetween: 0,
-	});
-	swiper.on("slideChange", () => {
-		setActiveSlideText();
-		setActivePagination();
-	});
-	swiperPartners = new Swiper(".mySwiper2", {
-		initialSlide: 0,
-		slidesPerView: 11,
-		breakpoints: {
-			200: {
-				slidesPerView: 2
-		 	},
-			400: {
-				slidesPerView: 4
-		 	},
-			650: {
-				slidesPerView: 7 
-		 	},
-	 
-			950: {
-       			slidesPerView: 9 
-			},
-			1200: {
-				slidesPerView: 11 
-		 },
-		}
-
-
-	});
-	setActiveSlideText();
-	setActivePagination();
-	getOffset();
-
-	const menu = document.querySelector(".menu_list"),
-		menuItem = document.querySelectorAll(".menu_list_item"),
-		hamburger = document.querySelector(".hamburger"),
-		menu_close = document.querySelector(".menu_close");
-
-	hamburger.addEventListener("click", () => {
-		menu.classList.add("menu_list_active");
-	});
-	menu_close.addEventListener("click", () => {
-		menu.classList.remove("menu_list_active");
-	});
-	menuItem.forEach((item) => {
-		item.addEventListener("click", () => {
-			menu.classList.toggle("menu_list_active");
-		});
-	});
-
-	let h_hght = document.querySelector("header").offsetHeight; // высота шапки
-	let h_mrg = 0; // отступ когда шапка уже не видна
-	window.addEventListener("scroll", () => {
-		
-		let top = window.pageYOffset;
-		const elem = document.querySelector("header");
-		const nav = document.querySelector(".menu_block");
-		if (top + h_mrg < h_hght) {
-			elem.style.top=(35 - top) + "px" ;
-			nav.style.cssText="background:#00000000;";
-		} else {
-			elem.style.top="10px";
-			nav.style.cssText="background:linear-gradient(0deg, #2e6bcb, #2e6bcb), #ffffff;";
-		}
-	});
-
-	let preloader = document.querySelector("#preloader"),
-		loader = document.querySelector("#preloader #loader");
-	fadeOut(loader, 0);
-	fadeOut(preloader, 200);
-});
-
-document.querySelector(".swiper-button-next").addEventListener(`click`, () => {
-	swiper.slideNext();
-});
-
-document.querySelector(".swiper-button-prev").addEventListener(`click`, () => {
-	swiper.slidePrev();
-});
-
+}
+//Footer margin from top
 window.addEventListener(
 	`resize`,
 	() => {
@@ -160,21 +67,5 @@ function getOffset() {
 	document.querySelector(".footer").style.marginTop = form_position - promo_position + 35 + 240 + "px";
 }
 
-//Pagination slides settings
 
-slides_points.forEach((slide) => {
-	slide.addEventListener("click", async (e) => {
-		const slideTo = e.target.getAttribute("data-slide-to");
-		swiper.slideTo(slideTo - 1);
-	});
-});
 
-function setActiveSlideText() {
-	slides_text.forEach((slide) => (slide.style.display = "none"));
-	slides_text[swiper.activeIndex].style.display = "block";
-}
-function setActivePagination() {
-	slides_points.forEach((slide) => (slide.style.background = "#006dd233"));
-	slides_points[swiper.activeIndex].style.background = "#006dd2";
-}
-//preloader

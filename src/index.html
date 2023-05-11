@@ -11,7 +11,14 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Document</title>
+		<link rel="icon" type="image/png" href="../assets/images/logo_2.svg" />
+		<meta
+			name="description"
+			content="Are you looking for business or first class flight deals? Book the cheapest business class tickets with us today! ✈ Dоmestic and international
+Airlines ✈ Tailored flight and travel itineraries"
+		/>
+
+		<title>Business Class Flight Deals & Tickets | Travel with Flyer Club</title>
 		<style>
 			#preloader {
 				position: fixed;
@@ -130,7 +137,9 @@
 							<a href="#Reviews" class="menu_list_item_link">Reviews</a>
 						</li>
 						<li class="menu_list_item">
-							<button class="menu_list_item_link">Leave a request</button>
+							<button class="btn menu_list_item_link js-open-modal" data-modal="3">
+								Leave a request
+							</button>
 						</li>
 					</ul>
 					<div class="hamburger">
@@ -206,34 +215,43 @@
 					<div class="form_free_quote">
 						<div class="form_free_quote_content">
 							<h3 class="form_free_quote_title">Fill out the form to get a free quote</h3>
-							<form class="form_free_quote_form">
+							<form class="form_free_quote_form" name="form_free_quote">
 								<div class="form_block">
-									<div class="form_input">
+									<div class="form_input block-input">
 										<label for="name" class="form_label">Name</label>
 										<input
 											type="text"
+											data-input-type="name"
 											placeholder="Enter your name"
 											class="form-control"
-											id="name"
 										/>
 									</div>
-									<div class="form_input">
+									<div class="form_input block-input">
 										<label for="email" class="form_label">Email</label>
 										<input
 											type="text"
+											data-input-type="email"
 											placeholder="example@example.com"
 											class="form-control"
-											id="email"
 										/>
 									</div>
-									<div class="form_input">
+									<div class="form_input block-input">
 										<label for="phone_number" class="form_label">Phone number</label>
-										<input type="tel" placeholder="" class="form-control" id="phone_number" inputmode="tel" />
+										<input
+											inputmode="tel"
+											aria-invalid="true"
+											data-input-type="phone"
+											data-phone-id="2"
+											type="tel"
+											placeholder=""
+											class="form-control phone"
+											id="phone_number"
+										/>
 									</div>
 								</div>
 								<div class="form_submit">
 									<div class="form_submit_item"></div>
-									<button type="button" class="form_submit_button">Get a Free Quote</button>
+									<button type="button" class="btn form_submit_button form_submit_button_free_quote">Get a Free Quote</button>
 									<div class="form_submit_item"></div>
 								</div>
 							</form>
@@ -309,7 +327,9 @@
 				</section>
 
 				<section class="advantages">
-					<h2 class="section_title">Why fly to Dubai with <span class="section_title_highlight">Flyer Club?</span></h2>
+					<h2 class="section_title">
+						Why fly to Dubai with <span class="section_title_highlight">Flyer Club?</span>
+					</h2>
 					<div class="advantages_block">
 						<div class="advantages_block_item">
 							<div class="advantages_block_item_icon">
@@ -494,7 +514,7 @@
 					</div>
 
 					<div class="how_it_works_leave_request">
-						<button class="leave_request_button">Leave a request</button>
+						<button class="btn leave_request_button js-open-modal" data-modal="3">Leave a request</button>
 					</div>
 				</section>
 
@@ -588,7 +608,9 @@
 					</div>
 
 					<div class="first_class_flights_leave_request">
-						<button class="leave_request_button choose_flight">Choose a flight</button>
+						<button class="btn leave_request_button choose_flight js-open-modal" data-modal="3">
+							Choose a flight
+						</button>
 					</div>
 				</section>
 				<section class="reviews" id="Reviews">
@@ -610,14 +632,10 @@
 					</div>
 				</section>
 				<section class="section-form">
-					<h2 class="section_title">
-						Sounds like your sort of travel plan?
-						
-					</h2>
+					<h2 class="section_title">Sounds like your sort of travel plan?</h2>
 					<h3 class="form-title">
 						Get in touch today with your desired destination and we’ll be back with a range of bespoke
 						quotes, faster than you can say ‘seats for take-off’
-						
 					</h3>
 
 					<div class="container-form">
@@ -634,29 +652,43 @@
 								<div class="flex">
 									<div class="block-input block_error">
 										<p>Name*</p>
-										<input id="name" name="name" type="text" placeholder="Enter your name" />
+										<input
+											data-input-type="name"
+											name="name"
+											type="text"
+											placeholder="Enter your name"
+										/>
 									</div>
 
 									<div class="block-input block_error">
 										<p>Phone number*</p>
 										<input
+											data-input-type="phone"
+											data-phone-id="0"
 											id="phoneFormHome"
-											class="form-control-2 tel"
+											class="form-control-2 tel phone"
 											type="tel"
 											name="phone"
 											inputmode="tel"
 											value=""
+											
 										/>
 									</div>
 
 									<div class="block-input block_error">
 										<p>Email*</p>
-										<input id="email" name="email" type="text" placeholder="example@example.com" />
+										<input
+											data-input-type="email"
+											name="email"
+											type="text"
+											placeholder="example@example.com"
+											
+										/>
 									</div>
 								</div>
 
-								<div class="checkbox block_error">
-									<input name="checkbox" type="checkbox" class="custom-checkbox" id="form_checkbox" />
+								<div class="checkbox block_error block-input">
+									<input data-input-type="checkbox" name="checkbox" type="checkbox" class="custom-checkbox" id="form_checkbox" />
 									<label for="form_checkbox">
 										<div class="text">
 											*I give consent to the processing of my personal data given in the contact
@@ -667,7 +699,7 @@
 								</div>
 
 								<div class="form_btn">
-									<button class="form_submit_button">Get a Free Quote</button>
+									<button type="button" class="btn leave_request_button form_submit_button">Get a Free Quote</button>
 								</div>
 							</form>
 						</div>
@@ -869,6 +901,197 @@
 					<div class="elipse_online">Online 24/7</div>
 					<div class="free_call_back">Free call back</div>
 				</button>
+			</div>
+		</div>
+
+		<div class="overlay js-overlay-modal"></div>
+		<!--форма-->
+		<div class="modal modal__form" data-modal="3">
+			<div class="modal__cross js-modal-close">
+				<div class="icon">
+					<span class="icon-close-left"></span>
+					<span class="icon-close-right"></span>
+				</div>
+			</div>
+			<div class="modal-form">
+				<div class="form_title">
+					<p>Fill out the contact form for a free quote</p>
+				</div>
+
+				<div class="form_booking">
+					<div class="form">
+						<form
+							name="form-modal"
+							id="sendMesModal"
+							action="send_mail.php"
+							method="POST"
+							class="form-valid message"
+							onsumbit="return false"
+						>
+							<div class="flex">
+								<div class="booking_form">
+									<div class="field block_error block-input">
+										<p>Name*</p>
+										<input
+											data-input-type="name"
+											name="name"
+											type="text"
+											placeholder="Enter your name"
+										/>
+									</div>
+
+									<div class="field block_error block-input">
+										<p>Phone number*</p>
+										<input
+											data-input-type="phone"
+											data-phone-id="1"
+											id="phoneModalForm"
+											class="Validateclass phone"
+											type="tel"
+											name="phone"
+											inputmode="tel"
+											value=""
+										/>
+									</div>
+
+									<div class="field block_error block-input">
+										<p>Email*</p>
+										<input
+											data-input-type="email"
+											name="email"
+											type="text"
+											placeholder="example@example.com"
+										/>
+									</div>
+								</div>
+
+								<div class="booking_photo">
+									<div class="photo">
+										<img src="../assets/images/photo2.jpg" alt="Photo" title="Photo" />
+									</div>
+								</div>
+							</div>
+
+							<div class="checkbox block_error block-input">
+								<input
+									data-input-type="checkbox"
+									name="checkbox"
+									type="checkbox"
+									class="custom-checkbox"
+									id="modal_checkbox-header"
+								/>
+								<label class="bg" for="modal_checkbox-header">
+									<div class="text">
+										*I give consent to the processing of my personal data given in the contact form
+										above under the terms and conditions of
+										<a href="https://flyer-club.com/privacy-policy.html">Privacy Policy</a>
+									</div>
+								</label>
+							</div>
+
+							<div class="form_btn">
+								<button type="button" class="btn form_submit_button">Get a Free Quote</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--сообщение при успешной отправке-->
+		<div class="modal modal_feedback" data-modal="4">
+			<div class="modal__cross js-modal-close modal_feedback_close ">
+				<div class="icon">
+					<span class="icon-close-left"></span>
+					<span class="icon-close-right"></span>
+				</div>
+			</div>
+			<div class="form">
+				<div class="form_icon">
+					<div class="block-icon bg">
+						<div class="icon">
+							<img src="assets/images/call_man.svg" alt="call man" />
+						</div>
+					</div>
+
+					<div class="form_mes">
+						<p class="mes__title">We appreciate your inquiry!</p>
+						<p class="mes__body">You will be contacted by one of our travel experts shortly.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal__form modal__active">
+			<div class="modal__cross js-modal-close closeSignUpModal">
+				<div class="icon">
+					<span class="icon-close-left"></span>
+					<span class="icon-close-right"></span>
+				</div>
+			</div>
+			<div class="modal-form">
+				<div class="form_title">
+					<p class="title">Business & First Class up to <span>50%</span></p>
+					<p>Fill out the form and receive exclusive flight offers with discounts by email every week</p>
+				</div>
+
+				<div class="form_booking">
+					<div class="form">
+						<form
+							name="form-modal-choose"
+							id="form_active_modal"
+							action="send_mail.php"
+							method="POST"
+							class="form-valid message"
+						>
+							<div class="flex">
+								<div class="booking_form">
+									<div class="field block_error block-input">
+										<p>Your city*</p>
+										<input data-input-type="city" id="city" name="name" type="text" placeholder="Enter your city" />
+									</div>
+
+									<div class="field block_error block-input">
+										<p>Email*</p>
+										<input
+											data-input-type="email"
+											class="validation_check email"
+											name="email_active"
+											type="text"
+											placeholder="example@example.com"
+										/>
+									</div>
+								</div>
+
+								<div class="booking_photo">
+									<div class="photo">
+										<img src="../assets/images/photo2.jpg" alt="Photo" title="Photo" />
+									</div>
+								</div>
+							</div>
+
+							<div class="checkbox block_error block-input">
+								<input
+								data-input-type="checkbox"
+									name="checkbox"
+									type="checkbox"
+									class="custom-checkbox"
+									id="modal_active_checkbox"
+								/>
+								<label class="bg" for="modal_active_checkbox">
+									<div class="text">
+										*I give consent to the processing of my personal data given in the contact form
+										above under the terms and conditions of
+										<a href="/privacy-policy.html">Privacy Policy</a>
+									</div>
+								</label>
+							</div>
+
+							<div class="form_btn">
+								<button class="btn form_submit_button">Sign Up NOW</button>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 
