@@ -63,8 +63,15 @@ window.addEventListener(
 function getOffset() {
 	const form_position = document.querySelector(".form_free_quote").getBoundingClientRect().bottom;
 	const promo_position = document.querySelector(".promo").getBoundingClientRect().bottom;
+	const flyer_club_position = document.querySelector(".flyer_club_block").getBoundingClientRect();
 	document.querySelector(".info_block").style.top = form_position - promo_position + 35 + "px";
 	document.querySelector(".footer").style.marginTop = form_position - promo_position + 35 + 240 + "px";
+	console.log(flyer_club_position.left);
+	document.querySelector(".elipse").style.top = flyer_club_position.top-10 + "px";
+	document.querySelector(".elipse").style.right = flyer_club_position.left + 130 + "px";
+	
+
+
 }
 
 

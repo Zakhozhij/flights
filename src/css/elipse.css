@@ -1,8 +1,8 @@
-.call_back{
+/* .call_back{
     position: fixed;
     width: 100%;
-    top:33.5%;
-   
+    
+    
 }
 .call_back .container{
     position: relative;
@@ -12,9 +12,13 @@
     max-width: 1292px;
     width: 90%;
     
-}
+} */
 .elipse {
+    position: fixed;
 	display: block;
+    z-index: 1000;
+    top:316px;
+    right:308px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
