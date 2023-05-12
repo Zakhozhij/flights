@@ -7,6 +7,9 @@
 	flex-wrap: wrap;
 	gap: 28px;
 }
+.section-about-company h2{
+	margin-bottom: 30px;
+}
 .advantages_block_item {
 	cursor: pointer;
 	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
