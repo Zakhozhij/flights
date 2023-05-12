@@ -33,6 +33,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	display: flex;
 	transform: translate(-50%, -50%);
 }
 .block-icon .icon .filter {

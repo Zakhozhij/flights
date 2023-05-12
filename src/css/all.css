@@ -304,6 +304,9 @@ html {
 body {
 	background: #ffffff;
 }
+.datepicker{
+	padding:0 !important;
+}
 #preloader {
 	position: fixed;
 	top: 0;
@@ -403,7 +406,7 @@ body {
 	align-items: center;
 	padding: 0px;
 	gap: 64px;
-	position: relative;
+	/* position: relative; */
 	max-width: 1255px;
 	z-index: 0;
 	width: 90%;
@@ -442,7 +445,6 @@ a, button {
   }
   @media all and (max-width: 575px) {
 	a.btn, button.btn {
-	  font-size: 12px;
 	  padding: 7px 1em;
 	}
   }
@@ -551,6 +553,7 @@ a, button {
 	animation: spin 3s linear infinite;
 }
 .section_title {
+	position: relative;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 36px;

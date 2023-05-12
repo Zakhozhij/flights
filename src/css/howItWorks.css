@@ -7,6 +7,7 @@
     gap: 40px;
     max-width: 1110.28px;
     width:88.4%;
+    margin: 0 auto;
 }
 .how_it_works_title{
     font-style: normal;
@@ -98,7 +99,7 @@
 	left: 0;
 	margin: auto;
     top: 85.25px;
-    z-index: -1;
+    z-index: 0;
     background: linear-gradient(180deg, #006DD2 -11.29%, #59C2FD 105.4%);
 }
 
@@ -112,7 +113,7 @@
     top: 88px;
     transform: translateY(-50%);
 }
-.how_it_works_way_item:nth-child(4):after {
+.how_it_works_way_item:nth-child(5):after {
     content: '';
     border: 0; 
     border-left: 0;
@@ -166,10 +167,6 @@
         right: 0;
         left: 0;
         margin: auto;
-
-
-
-        z-index: -1;
         background: linear-gradient(180deg, #006DD2 -11.29%, #59C2FD 105.4%);
     }
     .how_it_works_way_item:after {

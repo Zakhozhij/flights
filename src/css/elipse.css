@@ -17,8 +17,8 @@
     position: fixed;
 	display: block;
     z-index: 100;
-    top:316px;
-    right:308px;
+    top:32%;
+    right:17%;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -142,3 +142,4 @@
 		display: none;
 	}
 }
+
