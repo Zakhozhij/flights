@@ -61,12 +61,12 @@
 	z-index: 1;
 }
 
-.swiper-button-prev {
+.swiper-button-prev-benefit {
 	left:0;
 	padding: 0;
 	cursor: pointer;
 }
-.swiper-button-next {
+.swiper-button-next-benefit {
 	right:0;
 	padding: 0;
 	cursor: pointer;

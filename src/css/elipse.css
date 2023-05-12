@@ -16,7 +16,7 @@
 .elipse {
     position: fixed;
 	display: block;
-    z-index: 1000;
+    z-index: 100;
     top:316px;
     right:308px;
     width: 100px;

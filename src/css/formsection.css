@@ -22,7 +22,7 @@
 	height: 120px;
 	background-repeat: no-repeat;
 	background-size: 120px;
-	background-image: url("../assets/images/airplane-1.svg");
+	background-image: url("../icons/airplane-1.svg");
 }
 .form-title{
     text-align: center;
@@ -336,7 +336,7 @@ textarea {
 	content: "";
 	color: red;
 	transition: 0.3s ease;
-	background-image: url("../assets/images/checkmark.svg");
+	background-image: url("../icons/checkmark.svg");
 	background-size: 14px;
 }
 
